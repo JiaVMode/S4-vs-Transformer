@@ -1,0 +1,25 @@
+# Experiment Configuration
+
+# Data
+data_path: "data/input.txt" # Path to text file. If not found, will use synthetic data.
+block_size: 1024        # Sequence length
+batch_size: 8
+num_workers: 4
+
+# Model
+model_type: "s4"        # Options: 'transformer', 's4', 'hybrid'
+d_model: 128
+n_layer: 4
+n_head: 4              # Only for Transformer/Hybrid
+d_ff: 512
+dropout: 0.1
+vocab_size: 65        # Will be overwritten by dataset if computed
+
+# Training
+learning_rate: 0.001
+epochs: 1
+log_interval: 10
+device: "cpu"
+
+# Checkpoint
+save_dir: "checkpoints"
